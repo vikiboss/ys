@@ -11,6 +11,7 @@ export default async function App(
   opts: FastifyServerOptions,
   done: DoneFuncWithErrOrRes
 ) {
+  app.get('/', async () => ({ status: 0, data: null, msg: '原神 API' }));
   app.get('/roles', async () => ({ status: 0, data: roles, msg: '获取成功' }));
 
   done();
